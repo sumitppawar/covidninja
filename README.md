@@ -1,6 +1,6 @@
 # Covid Ninja
 
-A Flutter app which reminds about cCovid-19 safety once we move outside of home.
+A Flutter app which reminds about Covid-19 safety once we move outside of home.
 
 ![Screen](img.png?raw=true "Home Page")
 
