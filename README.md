@@ -17,5 +17,10 @@ How to build apk ?
 flutter build apk --no-shrink
 ```
 
-
-
+What it supports so far?
+- Vibrates on given time interval
+- Only when 100 meter away from home address
+  
+What needs to add ?
+- Local notification 
+- Better location accuracy

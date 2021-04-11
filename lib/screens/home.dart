@@ -207,7 +207,7 @@ class HomeScreenState extends State<HomeScreen> {
         autofocus: true,
         style: DefaultTextStyle.of(context).style.copyWith(),
         decoration: InputDecoration(
-          labelText: 'Remind in every minutes?',
+          labelText: 'Reminder in every minutes?',
           prefixIcon: Icon(Icons.arrow_drop_down_circle_outlined),
           border: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.lightBlue[900]),

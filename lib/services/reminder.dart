@@ -15,15 +15,16 @@ class ReminderService {
     await keyVal.write("long", long);
     await keyVal.write("reminderInterval", reminderInterval.toString());
     await keyVal.write("isReminderOn", isReminderOn.toString());
-    updateReminder(lat, long, (reminderInterval*60), isReminderOn);
+
+    updateReminder(lat, long, (5), isReminderOn);
   }
 
   void updateReminder(String lat, String long, int reminderInterval,bool isReminderOn) {
     if(isReminderOn) {
-      t.cancel();
-    } else {
       Duration duration = Duration(seconds: reminderInterval);
       t = new Timer.periodic(duration, onTimerInvoke);
+    } else {
+      t.cancel();
     }
   }
 
@@ -32,7 +33,7 @@ class ReminderService {
     // Set notification sound
     //AudioPlayer audioPlayer = AudioPlayer(mode: PlayerMode.LOW_LATENCY);
     //audioPlayer.play("https://github.com/sumitppawar/covidninja/notifcation.mp3");
-    Vibration.vibrate(duration: 1000);
+    Vibration.vibrate(duration: 2000, amplitude: 255);
   }
 
   bool isOutSideOfHouse() {
